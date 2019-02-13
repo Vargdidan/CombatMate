@@ -10,6 +10,7 @@ A combat tool for DnD
 - Pressing one of the input-fields should promt a text-edit box to appear in the middle of the screen.
 - The text-edit is summoned and connected to each input-field.
 - Weapons should have a button for changing the current weapon. Should be a dropdown list.
+- HP should be represented as a textureprogress.
 - ~~Use a spritesheet for counting and select the correct frame corresponding to the value.~~
 - **Spritesheet is a nice to have feature, use numbers in the first iteration**
 - End turn should count down the effects (Rage, buffs and debuffs) and count up the number of turns.
