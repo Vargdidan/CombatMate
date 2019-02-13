@@ -11,6 +11,7 @@ A combat tool for DnD
 - The text-edit is summoned and connected to each input-field.
 - Weapons should have a button for changing the current weapon. Should be a dropdown list.
 - HP should be represented as a textureprogress.
+- Tutorial on a animated HP-bar: https://docs.godotengine.org/en/3.0/getting_started/step_by_step/ui_code_a_life_bar.html
 - ~~Use a spritesheet for counting and select the correct frame corresponding to the value.~~
 - **Spritesheet is a nice to have feature, use numbers in the first iteration**
 - End turn should count down the effects (Rage, buffs and debuffs) and count up the number of turns.
