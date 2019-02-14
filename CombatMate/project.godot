@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="CombatMate"
+run/main_scene="res://Combat.tscn"
 config/icon="res://icon.png"
 
 [rendering]
