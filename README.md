@@ -22,3 +22,4 @@ A combat tool for DnD
 - Death saves scene should result in either going back to combat scene or to death scene.
 - Death saves should have a reset of saves for after a long rest and a healed button.
 - Turns is counted when a death save is registered.
+- Add passive perception
