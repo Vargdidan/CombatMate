@@ -29,7 +29,7 @@ func _on_max_hp_button_pressed():
 
 
 func _on_Max_LineEdit_text_entered(new_text):
-	current_label = new_text
+	max_label.set_text(new_text)
 	max_lineEdit.visible = false
 	texture_progress.max_value = int(new_text)
 	pass # Replace with function body.
