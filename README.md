@@ -16,7 +16,7 @@ A combat tool for DnD
 - **Spritesheet is a nice to have feature, use numbers in the first iteration**
 - ~~End turn should count down the effects (Rage, buffs and debuffs) and count up the number of turns.~~
 - ~~Holding the "End turn" button should end combat.~~
-- ~~Ending combat should reset turns~~ and clear all temporary effects. **It is possible to reset each effect, in case one should have a long effect (mage armour) which could stay on for several battles.
+- ~~Ending combat should reset turns~~ and clear all temporary effects. **It is possible to reset each effect, in case one should have a long effect (mage armour) which could stay on for several battles.**
 - Add a exhaustion to the design, place it under the HP bar.
 - Death saves is on its own scene which is shown when HP reaches 0.
 - Death saves scene should result in either going back to combat scene or to death scene.
