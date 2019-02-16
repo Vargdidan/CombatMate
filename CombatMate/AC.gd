@@ -12,3 +12,10 @@ func _on_TextureButton_pressed():
 	lineEdit.visible = true
 	lineEdit.grab_focus()
 	pass # Replace with function body.
+
+
+func _on_LineEdit_text_entered(new_text):
+	var label = get_node("skjold/Label")
+	label.set_text(new_text)
+	get_node("LineEdit").visible = false
+	pass # Replace with function body.
