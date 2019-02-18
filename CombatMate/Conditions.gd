@@ -14,26 +14,29 @@ func _process(delta):
 
 func _on_Turns_new_turn():
 	turns1 = int(get_node("Label1").get_text())
-	if (turns1 <= 1):
-		get_node("Label1").set_text("0")
-		get_node("Desc1").set_text("")
-	else:
-		get_node("Label1").set_text(String(turns1-1))
-	
+	if (get_node("Label1").get_text() != "00"):
+		if (turns1 <= 1):
+			get_node("Label1").set_text("0")
+			get_node("Desc1").set_text("")
+		else:
+			get_node("Label1").set_text(String(turns1-1))
+		
 	turns2 = int(get_node("Label2").get_text())
-	if (turns2 <= 1):
-		get_node("Label2").set_text("0")
-		get_node("Desc2").set_text("")
-	else:
-		get_node("Label2").set_text(String(turns2-1))
-	
+	if (get_node("Label2").get_text() != "00"):
+		if (turns2 <= 1):
+			get_node("Label2").set_text("0")
+			get_node("Desc2").set_text("")
+		else:
+			get_node("Label2").set_text(String(turns2-1))
+		
 	turns3 = int(get_node("Label3").get_text())
-	if (turns3 <= 1):
-		get_node("Label3").set_text("0")
-		get_node("Desc3").set_text("")
-	else:
-		get_node("Label3").set_text(String(turns3-1))
-	
+	if (get_node("Label3").get_text() != "00"):	
+		if (turns3 <= 1):
+			get_node("Label3").set_text("0")
+			get_node("Desc3").set_text("")
+		else:
+			get_node("Label3").set_text(String(turns3-1))
+		
 	pass # Replace with function body.
 
 func _on_turns_btn1_button_down():
