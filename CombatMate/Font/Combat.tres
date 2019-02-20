@@ -1,0 +1,11 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="res://Font/Inprimis55regular_v126free.ttf" type="DynamicFontData" id=1]
+
+[resource]
+
+size = 130
+outline_size = 9
+outline_color = Color( 0.247059, 0.247059, 0.247059, 1 )
+font_data = ExtResource( 1 )
+
