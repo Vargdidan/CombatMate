@@ -6,38 +6,46 @@ onready var turns1 = 0
 onready var turns2 = 0
 onready var turns3 = 0
 
+signal input_popup(currentNode, childNode)
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	var inputPopup = get_parent().get_node("InputPopup")
+	self.connect("input_popup", inputPopup, "_enter_value")
+
 func _process(delta):
 	if (isPressed):
 		pressed_time += delta
-		print(pressed_time)
-	pass
 
 func _on_Turns_new_turn():
-	turns1 = int(get_node("Label1").get_text())
-	if (get_node("Label1").get_text() != "00"):
+	turns1 = int(get_node("Turns1").get_text())
+	if (get_node("Turns1").get_text() != "00"):
 		if (turns1 <= 1):
-			get_node("Label1").set_text("0")
+			get_node("Turns1").set_text("0")
 			get_node("Desc1").set_text("")
 		else:
-			get_node("Label1").set_text(String(turns1-1))
+			get_node("Turns1").set_text(String(turns1-1))
 		
-	turns2 = int(get_node("Label2").get_text())
-	if (get_node("Label2").get_text() != "00"):
+	turns2 = int(get_node("Turns2").get_text())
+	if (get_node("Turns2").get_text() != "00"):
 		if (turns2 <= 1):
-			get_node("Label2").set_text("0")
+			get_node("Turns2").set_text("0")
 			get_node("Desc2").set_text("")
 		else:
-			get_node("Label2").set_text(String(turns2-1))
+			get_node("Turns2").set_text(String(turns2-1))
 		
-	turns3 = int(get_node("Label3").get_text())
-	if (get_node("Label3").get_text() != "00"):	
+	turns3 = int(get_node("Turns3").get_text())
+	if (get_node("Turns3").get_text() != "00"):	
 		if (turns3 <= 1):
-			get_node("Label3").set_text("0")
+			get_node("Turns3").set_text("0")
 			get_node("Desc3").set_text("")
 		else:
-			get_node("Label3").set_text(String(turns3-1))
-		
-	pass # Replace with function body.
+			get_node("Turns3").set_text(String(turns3-1))
+
+func changed_value(value, child):
+	if (value == ""):
+		return
+	get_node(child).set_text(value)
 
 func _on_turns_btn1_button_down():
 	isPressed = true
@@ -46,115 +54,46 @@ func _on_turns_btn1_button_down():
 func _on_turns_btn1_button_up():
 	isPressed = false
 	if (pressed_time > 0.4):
-		get_node("Label1").set_text("0")
+		get_node("Turns1").set_text("0")
 		get_node("Desc1").set_text("")
 	else:
-		var lineEdit = get_node("turns1")
-		lineEdit.visible = true
-		lineEdit.grab_focus()
+		emit_signal("input_popup", self.get_path(), "Turns1")
 	pressed_time = 0
 	pass # Replace with function body.
 
 func _on_desc_btn1_pressed():
-	var lineEdit = get_node("desc1")
-	lineEdit.visible = true
-	lineEdit.grab_focus()
-	pass # Replace with function body.
-
-
-func _on_turns1_text_entered(new_text):
-	if (new_text == ""):
-		new_text = "0"
-	get_node("Label1").set_text(new_text)
-	get_node("turns1").visible = false
-	get_node("turns1").clear()
-	pass # Replace with function body.
-
-
-func _on_desc1_text_entered(new_text):
-	get_node("Desc1").set_text(new_text)
-	get_node("desc1").visible = false;
-	get_node("desc1").clear()
-	pass # Replace with function body.
-
+	emit_signal("input_popup", self.get_path(), "Desc1")
 
 func _on_turns_btn2_button_down():
 	isPressed = true
 	pass # Replace with function body.
 
-
 func _on_turns_btn2_button_up():
 	isPressed = false
 	if (pressed_time > 0.4):
-		get_node("Label2").set_text("0")
+		get_node("Turns2").set_text("0")
 		get_node("Desc2").set_text("")
 	else:
-		var lineEdit = get_node("turns2")
-		lineEdit.visible = true
-		lineEdit.grab_focus()
+		emit_signal("input_popup", self.get_path(), "Turns2")
 	pressed_time = 0
 	pass # Replace with function body.
 
-
 func _on_desc_btn2_pressed():
-	var lineEdit = get_node("desc2")
-	lineEdit.visible = true
-	lineEdit.grab_focus()
-	pass # Replace with function body.
-
-
-func _on_turns2_text_entered(new_text):
-	if (new_text == ""):
-		new_text = "0"
-	get_node("Label2").set_text(new_text)
-	get_node("turns2").visible = false
-	get_node("turns2").clear()
-	pass # Replace with function body.
-
-
-func _on_desc2_text_entered(new_text):
-	get_node("Desc2").set_text(new_text)
-	get_node("desc2").visible = false;
-	get_node("desc2").clear()
-	pass # Replace with function body.
-
+	emit_signal("input_popup", self.get_path(), "Desc2")
 
 func _on_turns_btn3_button_down():
 	isPressed = true
 	pass # Replace with function body.
 
-
 func _on_turns_btn3_button_up():
 	isPressed = false
 	if (pressed_time > 0.4):
-		get_node("Label3").set_text("0")
+		get_node("Turns3").set_text("0")
 		get_node("Desc3").set_text("")
 	else:
-		var lineEdit = get_node("turns3")
-		lineEdit.visible = true
-		lineEdit.grab_focus()
+		emit_signal("input_popup", self.get_path(), "Turns3")
 	pressed_time = 0
 	pass # Replace with function body.
 
-
 func _on_desc_btn3_pressed():
-	var lineEdit = get_node("desc3")
-	lineEdit.visible = true
-	lineEdit.grab_focus()
-	pass # Replace with function body.
-
-
-func _on_turns3_text_entered(new_text):
-	if (new_text == ""):
-		new_text = "0"
-	get_node("Label3").set_text(new_text)
-	get_node("turns3").visible = false
-	get_node("turns3").clear()
-	pass # Replace with function body.
-
-
-func _on_desc3_text_entered(new_text):
-	get_node("Desc3").set_text(new_text)
-	get_node("desc3").visible = false;
-	get_node("desc3").clear()
-	pass # Replace with function body.
+	emit_signal("input_popup", self.get_path(), "Desc3")

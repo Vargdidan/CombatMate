@@ -1,16 +1,17 @@
 extends Node2D
 
 onready var ammo_label = get_node("ammo")
-onready var lineEdit = get_node("LineEdit")
+
+signal input_popup(currentNode, childNode)
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	var inputPopup = get_parent().get_node("InputPopup")
+	self.connect("input_popup", inputPopup, "_enter_value")
 
 func _on_TextureButton_pressed():
-	lineEdit.visible = true
-	lineEdit.grab_focus()
-	pass # Replace with function body.
+	emit_signal("input_popup", self.get_path(), "")
 
-
-func _on_LineEdit_text_entered(new_text):
-	ammo_label.set_text(new_text)
-	lineEdit.visible = false
-	lineEdit.clear()
-	pass # Replace with function body.
+func changed_value(value, child):
+	if (value != ""):
+		ammo_label.set_text(value)

@@ -9,13 +9,9 @@ onready var isPressed = false
 func _process(delta):
 	if (isPressed):
 		pressed_time += delta
-		print(pressed_time)
-	pass
 
 func _on_TextureButton_button_down():
 	isPressed = true
-	pass # Replace with function body.
-
 
 func _on_TextureButton_button_up():
 	isPressed = false
@@ -26,4 +22,3 @@ func _on_TextureButton_button_up():
 		turns_label.set_text(String(turns+1));
 		emit_signal("new_turn")
 	pressed_time = 0
-	pass # Replace with function body.
