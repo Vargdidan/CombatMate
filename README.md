@@ -1,14 +1,6 @@
 # CombatMate
 A combat tool for DnD
 
-## Current design:
-![CombatMate](https://user-images.githubusercontent.com/19270689/52906172-be1a3980-3246-11e9-8fa9-1603c1c098fa.png)
-
-## Initial design:
-
-![Screenshot](https://user-images.githubusercontent.com/19270689/52703285-4e722900-2f7e-11e9-8fc5-30e18cd2f50e.png)
-
-
 ## Comments:
 - ~~Pressing one of the input-fields should promt a text-edit box to appear in the middle of the screen.~~ **Nah**
 - ~~The text-edit is summoned and connected to each input-field.~~
