@@ -1,5 +1,5 @@
-# CombatMate
-A combat tool for DnD
+# DungeonMate
+A mate for you travels and dungeon exploring!
 
 ## Comments:
 - ~~Pressing one of the input-fields should promt a text-edit box to appear in the middle of the screen.~~ **Nah**
