@@ -1,2 +1,2 @@
-# DungeonMate
-A mate for you travels and dungeon exploring!
+A simple tool mainly for DnD.
+Made in Godot
