@@ -2,12 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Scar.png-3926bdbc320fd5754663009ec5c2015a.stex"
+path="res://.import/blank.png-0b7a85141e3d4f618c6b8ed8ed5b9b4b.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://icons/Scar.png"
-dest_files=[ "res://.import/Scar.png-3926bdbc320fd5754663009ec5c2015a.stex" ]
+source_file="res://icons/blank.png"
+dest_files=[ "res://.import/blank.png-0b7a85141e3d4f618c6b8ed8ed5b9b4b.stex" ]
 
 [params]
 

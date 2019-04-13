@@ -2,12 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sword.png-ba227931b3a3f405456fbd55d04c5cfd.stex"
+path="res://.import/bandaid.png-cbfb740b38d859317584afd141a39671.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://icons/sword.png"
-dest_files=[ "res://.import/sword.png-ba227931b3a3f405456fbd55d04c5cfd.stex" ]
+source_file="res://icons/bandaid.png"
+dest_files=[ "res://.import/bandaid.png-cbfb740b38d859317584afd141a39671.stex" ]
 
 [params]
 

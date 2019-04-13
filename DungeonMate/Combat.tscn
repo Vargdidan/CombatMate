@@ -21,8 +21,7 @@
 [ext_resource path="res://InputPopup.gd" type="Script" id=19]
 [ext_resource path="res://Font/Inprimis55regular_v126free.ttf" type="DynamicFontData" id=20]
 
-[sub_resource type="DynamicFont" id=10]
-
+[sub_resource type="DynamicFont" id=1]
 size = 40
 font_data = ExtResource( 20 )
 
@@ -484,7 +483,7 @@ margin_top = 275.0
 margin_right = 595.0
 margin_bottom = 325.0
 grow_vertical = 2
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 1 )
 align = 1
 expand_to_text_length = true
 context_menu_enabled = false

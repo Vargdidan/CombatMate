@@ -2,12 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bandaid.png-cbfb740b38d859317584afd141a39671.stex"
+path="res://.import/Heart_damaged.png-b85f1280258bfeef0c411850ff4470d4.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://icons/bandaid.png"
-dest_files=[ "res://.import/bandaid.png-cbfb740b38d859317584afd141a39671.stex" ]
+source_file="res://icons/Heart_damaged.png"
+dest_files=[ "res://.import/Heart_damaged.png-b85f1280258bfeef0c411850ff4470d4.stex" ]
 
 [params]
 

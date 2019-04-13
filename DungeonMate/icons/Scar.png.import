@@ -2,12 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/skjold.png-505a5e22679739a382ccc0a28c82408d.stex"
+path="res://.import/Scar.png-3926bdbc320fd5754663009ec5c2015a.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://icons/skjold.png"
-dest_files=[ "res://.import/skjold.png-505a5e22679739a382ccc0a28c82408d.stex" ]
+source_file="res://icons/Scar.png"
+dest_files=[ "res://.import/Scar.png-3926bdbc320fd5754663009ec5c2015a.stex" ]
 
 [params]
 
