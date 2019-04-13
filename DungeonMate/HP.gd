@@ -6,15 +6,11 @@ onready var max_label = get_node("TextureProgress/max")
 onready var current_label = get_node("TextureProgress/current")
 
 onready var texture_progress = get_node("TextureProgress")
-onready var tween = get_parent().get_node("Tween")
+onready var tween = get_node("Tween")
 
 func _ready():
 	var inputPopup = get_parent().get_node("InputPopup")
 	self.connect("input_popup", inputPopup, "_enter_value")
-	
-	texture_progress.max_value = int(max_label.get_text())
-	texture_progress.value = int(current_label.get_text())
-	animated_health = texture_progress.value
 
 func _process(delta):
 	current_label.set_text(String(int(animated_health)))
@@ -59,3 +55,23 @@ func _add_hp(value):
 	if (new_value > texture_progress.max_value):
 		new_value = texture_progress.max_value
 	_setHP(new_value)
+
+func save():
+	var save_dict = {
+		"node_hp" : {
+		"current_hp" : texture_progress.value,
+		"max_hp" : texture_progress.max_value
+		}}
+	return save_dict
+
+func load_from_json(json):
+	var node_hp = json["node_hp"]
+	if (node_hp == null):
+		return
+	var current = node_hp["current_hp"]
+	texture_progress.value = int(current)
+	current_label.set_text(String(current))
+	animated_health = current
+	var max_hp = node_hp["max_hp"]
+	texture_progress.max_value = int(max_hp)
+	max_label.set_text(String(max_hp))
