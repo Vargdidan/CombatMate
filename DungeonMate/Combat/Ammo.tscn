@@ -30,4 +30,5 @@ margin_right = 81.0
 margin_bottom = 41.0
 rect_scale = Vector2( 5.25581, 2.03921 )
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="button_down" from="TextureButton" to="." method="_on_TextureButton_button_down"]
+[connection signal="button_up" from="TextureButton" to="." method="_on_TextureButton_button_up"]

@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="DungeonMate"
 run/main_scene="res://Combat/Combat.tscn"
-config/icon="res://icon.png"
+config/icon="res://launcher/res/mipmap-hdpi/dm_launcher.png"
 
 [display]
 

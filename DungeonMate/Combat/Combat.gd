@@ -32,3 +32,6 @@ func _load_session():
 			node.load_from_json(current_line)
 		
 	saved_session.close()
+
+func _on_Timer_timeout():
+	_save_session()

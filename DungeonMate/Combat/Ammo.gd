@@ -1,6 +1,8 @@
 extends Node2D
 
 onready var ammo_label = get_node("ammo")
+onready var pressed_time = 0
+onready var isPressed = false
 
 signal input_popup(currentNode, childNode)
 
@@ -9,8 +11,23 @@ func _ready():
 	var inputPopup = get_parent().get_node("InputPopup")
 	self.connect("input_popup", inputPopup, "_enter_value")
 
-func _on_TextureButton_pressed():
-	emit_signal("input_popup", self.get_path(), "")
+func _process(delta):
+	if (isPressed):
+		pressed_time += delta
+
+func _on_TextureButton_button_up():
+	isPressed = false
+	if (pressed_time > 0.4):
+		emit_signal("input_popup", self.get_path(), "ammo")
+	else:
+		if (int(ammo_label.text) <= 1):
+			ammo_label.set_text("0")
+		else:
+			ammo_label.set_text(String(int(ammo_label.text)-1))
+	pressed_time = 0
+
+func _on_TextureButton_button_down():
+	isPressed = true
 
 func changed_value(value, child):
 	if (value != ""):
