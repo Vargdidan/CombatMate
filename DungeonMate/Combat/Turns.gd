@@ -22,3 +22,16 @@ func _on_TextureButton_button_up():
 		turns_label.set_text(String(turns+1));
 		emit_signal("new_turn")
 	pressed_time = 0
+
+func save():
+	var save_dict = {
+		"node_turn" : {
+		"turn" : turns_label.text
+		}}
+	return save_dict
+
+func load_from_json(json):
+	for key in json.keys():
+		if (key == "node_turn"):
+			var node = json["node_turn"]
+			turns_label.set_text(node["turn"])

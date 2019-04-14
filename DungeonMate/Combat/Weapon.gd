@@ -30,3 +30,20 @@ func changed_value(value, child):
 		attack_label.set_text(value)
 	elif (child == "damage"):
 		damage_label.set_text(value)
+
+func save():
+	var save_dict = {
+		"node_weapon" : {
+		"weapon" : weapon_label.text,
+		"attack" : attack_label.text,
+		"damage" : damage_label.text
+		}}
+	return save_dict
+
+func load_from_json(json):
+	for key in json.keys():
+		if (key == "node_weapon"):
+			var node = json["node_weapon"]
+			weapon_label.set_text(node["weapon"])
+			attack_label.set_text(node["attack"])
+			damage_label.set_text(node["damage"])

@@ -15,3 +15,16 @@ func _on_TextureButton_pressed():
 func changed_value(value, child):
 	if (value != ""):
 		ammo_label.set_text(value)
+
+func save():
+	var save_dict = {
+		"node_ammo" : {
+		"ammo" : ammo_label.text
+		}}
+	return save_dict
+
+func load_from_json(json):
+	for key in json.keys():
+		if (key == "node_ammo"):
+			var node = json["node_ammo"]
+			ammo_label.set_text(node["ammo"])

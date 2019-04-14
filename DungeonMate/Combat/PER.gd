@@ -16,3 +16,17 @@ func changed_value(value, child):
 	var label = get_node("Label")
 	if (value != ""):
 		label.set_text(value)
+
+func save():
+	var save_dict = {
+		"node_per" : {
+		"per" : get_node("Label").text
+		}}
+	return save_dict
+
+func load_from_json(json):
+	for key in json.keys():
+		if (key == "node_per"):
+			var node_init = json["node_per"]
+			var per = node_init["per"]
+			get_node("Label").set_text(per)
