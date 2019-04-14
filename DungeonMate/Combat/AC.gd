@@ -14,3 +14,17 @@ func changed_value(value, child):
 	var label = get_node("Label")
 	if (value != ""):
 		label.set_text(value)
+
+func save():
+	var save_dict = {
+		"node_ac" : {
+		"current_ac" : get_node("Label").text
+		}}
+	return save_dict
+
+func load_from_json(json):
+	for key in json.keys():
+		if (key == "node_ac"):
+			var node_ac = json["node_ac"]
+			var current = node_ac["current_ac"]
+			get_node("Label").set_text(current)

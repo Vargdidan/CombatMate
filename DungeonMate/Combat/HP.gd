@@ -65,13 +65,13 @@ func save():
 	return save_dict
 
 func load_from_json(json):
-	var node_hp = json["node_hp"]
-	if (node_hp == null):
-		return
-	var current = node_hp["current_hp"]
-	texture_progress.value = int(current)
-	current_label.set_text(String(current))
-	animated_health = current
-	var max_hp = node_hp["max_hp"]
-	texture_progress.max_value = int(max_hp)
-	max_label.set_text(String(max_hp))
+	for key in json.keys():
+		if (key == "node_hp"):
+			var node_hp = json["node_hp"]
+			var current = node_hp["current_hp"]
+			texture_progress.value = int(current)
+			current_label.set_text(String(current))
+			animated_health = current
+			var max_hp = node_hp["max_hp"]
+			texture_progress.max_value = int(max_hp)
+			max_label.set_text(String(max_hp))
