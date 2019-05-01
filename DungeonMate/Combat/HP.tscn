@@ -42,7 +42,7 @@ margin_bottom = 466.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
-text = "00"
+text = "0"
 autowrap = true
 
 [node name="current" type="Label" parent="TextureProgress"]
@@ -54,7 +54,7 @@ margin_bottom = 466.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
-text = "00"
+text = "0"
 align = 2
 autowrap = true
 

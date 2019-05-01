@@ -30,7 +30,7 @@ margin_bottom = 133.706
 rect_scale = Vector2( 0.7, 0.7 )
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
-text = "00"
+text = "10"
 align = 1
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

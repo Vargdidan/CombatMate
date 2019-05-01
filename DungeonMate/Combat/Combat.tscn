@@ -54,6 +54,7 @@ position = Vector2( 498.462, 270.102 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="InputPopup" type="PopupMenu" parent="."]
+editor/display_folded = true
 modulate = Color( 1, 1, 1, 0.901961 )
 margin_right = 1024.0
 margin_bottom = 600.0
